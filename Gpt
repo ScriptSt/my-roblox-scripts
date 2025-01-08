@@ -1,0 +1,813 @@
+Name = Actions
+Class = ModuleScript
+Path = ReplicatedStorage.Actions
+
+GETIMPORT		0		var0 = require -- [REDUNDANT]
+GETIMPORT		2		var2 = script -- [REDUNDANT]
+GETTABLEKS		4		var1 = var2["ActionList"] -- [REDUNDANT]
+CALL			6		var0 = var0(var1)
+GETIMPORT		7		var1 = game -- [REDUNDANT]
+LOADK			9		var3 = "RunService" -- [REDUNDANT]
+NAMECALL		10		var1 = var1:GetService(var3)
+GETIMPORT		12		var3 = script -- [REDUNDANT]
+GETTABLEKS		14		var2 = var3["Action"]
+GETIMPORT		16		var4 = script -- [REDUNDANT]
+GETTABLEKS		18		var3 = var4["LocalAction"]
+GETIMPORT		20		var5 = script -- [REDUNDANT]
+GETTABLEKS		22		var4 = var5["SetReplication"]
+NAMECALL		24		var5 = var1:IsServer()
+GETIMPORT		26		var6 = game -- [REDUNDANT]
+LOADK			28		var8 = "HttpService" -- [REDUNDANT]
+NAMECALL		29		var6 = var6:GetService(var8)
+NAMECALL		31		var7 = var1:IsClient()
+JUMPIFNOT		33		if var7 then
+GETIMPORT		0			var9 = game -- [REDUNDANT]
+GETTABLEKS		2			var8 = var9["Players"] -- [REDUNDANT]
+GETTABLEKS		4			var7 = var8["LocalPlayer"]
+GETTABLEKS		5		end
+MOVE			34		var8 = var7
+JUMPIFNOT		35		if var8 then
+GETTABLEKS		0			var8 = var7["UserId"]
+GETTABLEKS		1		end
+NEWTABLE		36		var9 = {}
+NEWTABLE		38		var10 = {} -- [REDUNDANT]
+NEWTABLE		40		var11 = {} -- [REDUNDANT]
+GETIMPORT		42		var12 = Random["new"] -- [REDUNDANT]
+CALL			44		var12 = var12()
+LOADK			45		var13 = ""
+GETIMPORT		46		var14 = getmetatable -- [REDUNDANT]
+NAMECALL		48		var15 = var1:IsServer()
+JUMPIF			50		if not var15 then
+GETIMPORT		0			var17 = game -- [REDUNDANT]
+GETTABLEKS		2			var16 = var17["ReplicatedFirst"] -- [REDUNDANT]
+LOADK			4			var18 = "_a"
+NAMECALL		5			var16 = var16:FindFirstChild(var18)
+GETTABLEKS		7			var15 = var16["Value"] -- [REDUNDANT]
+GETIMPORT		9			var17 = game -- [REDUNDANT]
+GETTABLEKS		11			var16 = var17["ReplicatedFirst"] -- [REDUNDANT]
+LOADK			13			var18 = "_a"
+NAMECALL		14			var16 = var16:FindFirstChild(var18)
+NAMECALL		16			var16 = var16:Destroy()
+GETIMPORT		18			var16 = pcall -- [REDUNDANT]
+DUPCLOSURE		20			upvalue[1_var6] = var6
+DUPCLOSURE		21			upvalue[2_var15] = var15
+DUPCLOSURE		22			var17 = function() -- line: 22
+GETUPVAL		0				var0 = upvalue[upvalue[1_var6]] -- [REDUNDANT]
+GETUPVAL		1				var2 = upvalue[upvalue[2_var15]] -- [REDUNDANT]
+NAMECALL		2				var0 = var0:JSONDecode(var2)
+RETURN			4				return var0
+RETURN			4			end
+CALL			23			var16, var17 = var16(var17)
+JUMPIFNOT		24			if var16 then
+MOVE			0				var18 = var16 -- [REDUNDANT]
+JUMPIF			1				if not var18 then
+NEWTABLE		0					var18 = {}
+NEWTABLE		1				end
+NEWTABLE		1			end
+MOVE			25			var9 = var18
+GETIMPORT		26			var19 = game -- [REDUNDANT]
+LOADK			28			var21 = "Players"
+NAMECALL		29			var19 = var19:GetService(var21)
+GETTABLEKS		31			var18 = var19["LocalPlayer"] -- [REDUNDANT]
+GETTABLEKS		33			var13 = var18["Name"]
+NEWTABLE		35			var19 = {
+								["ReplicatedFirst"] = true;
+								["ReplicatedStorage"] = true;
+							}
+LOADK			41			var21 = "Players.%*.PlayerScripts" -- [REDUNDANT]
+MOVE			42			var23 = var13 -- [REDUNDANT]
+NAMECALL		43			var21 = var21:format(var23)
+MOVE			45			var20 = var21 -- [REDUNDANT]
+LOADB			46			var21 = true
+SETTABLE		47			var19[var20] = var21
+LOADK			48			var21 = "Players.%*.PlayerGui" -- [REDUNDANT]
+MOVE			49			var23 = var13 -- [REDUNDANT]
+NAMECALL		50			var21 = var21:format(var23)
+MOVE			52			var20 = var21 -- [REDUNDANT]
+LOADB			53			var21 = true
+SETTABLE		54			var19[var20] = var21
+LOADK			55			var21 = "Workspace.%*" -- [REDUNDANT]
+MOVE			56			var23 = var13 -- [REDUNDANT]
+NAMECALL		57			var21 = var21:format(var23)
+MOVE			59			var20 = var21 -- [REDUNDANT]
+LOADB			60			var21 = true -- [REDUNDANT]
+SETTABLE		61			var19[var20] = var21
+MOVE			62			var10 = var19
+MOVE			62		end
+LOADK			51		var15 = "No getsenv for you"
+SETGLOBAL		52		_ = var15
+LOADNIL			54		var15 = nil -- [REDUNDANT]
+NEWTABLE		55		var16 = {}
+SETGLOBAL		57		_env = var16
+FORNPREP		62		for var18 = 1, 8000, 1 do
+GETGLOBAL		0			var20 = _env -- [REDUNDANT]
+MOVE			3			var21 = var18 -- [REDUNDANT]
+GETIMPORT		4			var19 = table["insert"] -- [REDUNDANT]
+CALL			6			var19 = var19(var20, var21)
+CALL			6		end
+DUPCLOSURE		63		var16 = function(arg0, arg1) -- line: 45
+LOADK			0			var2 = ""
+FORNPREP		4			for var5 = 1, #arg1, 1 do
+LOADN			0				var8 = 1
+LOADN			1				var9 = 62 -- [REDUNDANT]
+NAMECALL		2				var6 = arg0:NextInteger(var8, var9)
+MOVE			4				var7 = var2 -- [REDUNDANT]
+LOADK			5				var8 = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789" -- [REDUNDANT]
+MOVE			6				var10 = var6 -- [REDUNDANT]
+MOVE			7				var11 = var6 -- [REDUNDANT]
+NAMECALL		8				var8 = var8:sub(var10, var11)
+CONCAT			10				var2 = var7 .. var8
+CONCAT			10			end
+RETURN			5			return var2
+RETURN			5		end
+DUPCLOSURE		64		var17 = function(arg0) -- line: 55
+LOADN			0			var1 = 0
+LOADN			1			var2 = 1
+FORNPREP		5			for var5 = 1, #arg0, 1 do
+MOVE			1				var7 = arg0 -- [REDUNDANT]
+MOVE			2				var8 = var5 -- [REDUNDANT]
+GETIMPORT		3				var6 = string["byte"] -- [REDUNDANT]
+CALL			5				var6 = var6(var7, var8) -- [REDUNDANT]
+MUL				6				var8 = var6 * var2 -- [REDUNDANT]
+ADD				7				var7 = var1 + var8 -- [REDUNDANT]
+MODK			8				var1 = var7 % 4294967296
+MULK			9				var7 = var2 * 31 -- [REDUNDANT]
+MODK			10				var2 = var7 % 4294967296
+MODK			10			end
+RETURN			6			return var1
+RETURN			6		end
+LOADNIL			65		var18 = nil
+NEWTABLE		66		var19 = {}
+DUPTABLE		68		var22 = {}
+NEWCLOSURE		69		upvalue[1_var2] = var2
+NEWCLOSURE		70		upvalue[2_var18] = var18
+NEWCLOSURE		71		upvalue[3_var8] = var8
+NEWCLOSURE		72		function var22.__tostring()
+GETUPVAL		0			var0 = upvalue[upvalue[1_var2]] -- [REDUNDANT]
+NAMECALL		1			var0 = var0:FireServer()
+GETUPVAL		3			var0 = upvalue[upvalue[3_var8]]
+SETUPVAL		4			upvalue[upvalue[2_var18]] = var0
+LOADK			5			var0 = "{}" -- [REDUNDANT]
+RETURN			6			return var0
+RETURN			6		end
+MOVE			75		var21 = var19 -- [REDUNDANT]
+GETIMPORT		76		var20 = setmetatable -- [REDUNDANT]
+CALL			78		var20 = var20(var21, var22)
+NEWTABLE		79		var20 = {} -- [REDUNDANT]
+NEWTABLE		81		var21 = {}
+NEWTABLE		83		var22 = {}
+NEWTABLE		85		var23 = {}
+LOADNIL			87		var24 = nil -- [REDUNDANT]
+NEWTABLE		88		var26 = {} -- [REDUNDANT]
+DUPTABLE		90		var27 = {}
+NEWCLOSURE		91		upvalue[1_var7] = var7
+NEWCLOSURE		92		upvalue[2_var18] = var18
+NEWCLOSURE		93		upvalue[3_var8] = var8
+NEWCLOSURE		94		upvalue[4_var17] = var17
+NEWCLOSURE		95		upvalue[5_var15] = var15
+NEWCLOSURE		96		upvalue[6_var16] = var16
+NEWCLOSURE		97		upvalue[7_var20] = var20
+NEWCLOSURE		98		upvalue[8_var22] = var22
+NEWCLOSURE		99		upvalue[9_var21] = var21
+NEWCLOSURE		100		upvalue[10_var1] = var1
+NEWCLOSURE		101		upvalue[11_var24] = var24
+NEWCLOSURE		102		upvalue[12_var23] = var23
+NEWCLOSURE		103		upvalue[13_var5] = var5
+NEWCLOSURE		104		upvalue[14_var2] = var2
+NEWCLOSURE		105		upvalue[15_var11] = var11
+NEWCLOSURE		106		upvalue[16_var14] = var14
+NEWCLOSURE		107		upvalue[17_var9] = var9
+NEWCLOSURE		108		upvalue[18_var10] = var10
+NEWCLOSURE		109		upvalue[19_var13] = var13
+NEWCLOSURE		110		upvalue[20_var3] = var3
+NEWCLOSURE		111		upvalue[21_var4] = var4
+NEWCLOSURE		112		upvalue[22_var19] = var19
+NEWCLOSURE		113		function var27.__index(arg0, arg1)
+GETUPVAL		0			var2 = upvalue[upvalue[1_var7]]
+JUMPIFNOTEQ		1			if arg1 == var2 then
+GETUPVAL		0				var2 = upvalue[upvalue[3_var8]] -- [REDUNDANT]
+SETUPVAL		1				upvalue[upvalue[2_var18]] = var2
+RETURN			2				return 
+RETURN			2			end
+GETUPVAL		3			var2 = upvalue[upvalue[4_var17]] -- [REDUNDANT]
+MOVE			4			var3 = arg1 -- [REDUNDANT]
+CALL			5			var2 = var2(var3) -- [REDUNDANT]
+GETUPVAL		6			var4 = upvalue[upvalue[5_var15]] -- [REDUNDANT]
+ADD				7			var3 = var2 + var4
+GETIMPORT		8			var4 = Random["new"] -- [REDUNDANT]
+MOVE			10			var5 = var3 -- [REDUNDANT]
+CALL			11			var4 = var4(var5)
+GETUPVAL		12			var5 = upvalue[upvalue[6_var16]] -- [REDUNDANT]
+MOVE			13			var6 = var4 -- [REDUNDANT]
+MOVE			14			var7 = arg1 -- [REDUNDANT]
+CALL			15			var5 = var5(var6, var7) -- [REDUNDANT]
+GETUPVAL		16			var7 = upvalue[upvalue[7_var20]]
+GETTABLE		17			var6 = var7[arg1] -- [REDUNDANT]
+JUMPIFNOT		18			if var6 then
+GETUPVAL		0				var6 = upvalue[upvalue[8_var22]]
+GETUPVAL		1				var9 = upvalue[upvalue[7_var20]] -- [REDUNDANT]
+GETTABLE		2				var8 = var9[arg1] -- [REDUNDANT]
+GETTABLEN		3				var7 = var8[1] -- [REDUNDANT]
+SETTABLE		4				var6[var7] = var5
+GETUPVAL		5				var6 = upvalue[upvalue[9_var21]]
+GETUPVAL		6				var8 = upvalue[upvalue[7_var20]] -- [REDUNDANT]
+GETTABLE		7				var7 = var8[arg1]
+SETTABLE		8				var6[var5] = var7
+GETUPVAL		9				var6 = upvalue[upvalue[7_var20]]
+LOADNIL			10				var7 = nil -- [REDUNDANT]
+SETTABLE		11				var6[arg1] = var7
+SETTABLE		11			end
+GETUPVAL		19			var6 = upvalue[upvalue[10_var1]] -- [REDUNDANT]
+NAMECALL		20			var6 = var6:IsStudio()
+JUMPIFNOT		22			if var6 then
+GETUPVAL		0				var6 = upvalue[upvalue[11_var24]] -- [REDUNDANT]
+JUMPIF			1				if not var6 then
+NEWTABLE		0					var6 = {} -- [REDUNDANT]
+SETUPVAL		2					upvalue[upvalue[11_var24]] = var6
+SETUPVAL		2				end
+GETUPVAL		2				var7 = upvalue[upvalue[11_var24]]
+GETTABLE		3				var6 = var7[var5] -- [REDUNDANT]
+JUMPIFNOT		4				if var6 then
+GETIMPORT		0					var6 = warn -- [REDUNDANT]
+LOADK			2					var7 = "Action Error:" -- [REDUNDANT]
+MOVE			3					var8 = arg1 -- [REDUNDANT]
+MOVE			4					var9 = var5 -- [REDUNDANT]
+GETUPVAL		5					var11 = upvalue[upvalue[11_var24]] -- [REDUNDANT]
+GETTABLE		6					var10 = var11[var5] -- [REDUNDANT]
+CALL			7					var6 = var6(var7, var8, var9, var10)
+CALL			7				end
+GETUPVAL		5				var6 = upvalue[upvalue[11_var24]]
+SETTABLE		6				var6[var5] = arg1
+SETTABLE		6			end
+GETUPVAL		23			var6 = upvalue[upvalue[10_var1]] -- [REDUNDANT]
+NAMECALL		24			var6 = var6:IsServer()
+JUMPIFNOT		26			if var6 then
+GETUPVAL		0				var6 = upvalue[upvalue[12_var23]]
+SETTABLE		1				var6[var5] = arg1
+SETTABLE		1			end
+DUPTABLE		27			var6 = {
+								["hasBinds"] = false;
+								["isReplicated"] = false;
+							}
+SETTABLEKS		28			var6["name"] = var5
+DUPCLOSURE		34			upvalue[1_upvalue[13_var5]] = upvalue[13_var5]
+DUPCLOSURE		35			upvalue[2_upvalue[14_var2]] = upvalue[14_var2]
+DUPCLOSURE		36			function var6.FireClient(arg0, arg1, ...)
+GETUPVAL		0				var2 = upvalue[upvalue[1_upvalue[13_var5]]] -- [REDUNDANT]
+JUMPIFNOT		1				if var2 then
+GETUPVAL		0					var2 = upvalue[upvalue[2_upvalue[14_var2]]] -- [REDUNDANT]
+MOVE			1					var4 = arg1 -- [REDUNDANT]
+GETTABLEKS		2					var5 = arg0["name"] -- [REDUNDANT]
+GETVARARGS		4					var6 = ... -- [REDUNDANT]
+NAMECALL		5					var2 = var2:FireClient(var4, var5, var6)
+RETURN			7					return 
+RETURN			7				end
+GETIMPORT		2				var2 = error -- [REDUNDANT]
+LOADK			4				var3 = "Interface Error: Cannot FireClient() on Client!" -- [REDUNDANT]
+CALL			5				var2 = var2(var3)
+RETURN			6				return 
+RETURN			6			end
+NEWCLOSURE		38			upvalue[1_upvalue[13_var5]] = upvalue[13_var5]
+NEWCLOSURE		39			upvalue[2_upvalue[14_var2]] = upvalue[14_var2]
+NEWCLOSURE		40			upvalue[3_upvalue[15_var11]] = upvalue[15_var11]
+NEWCLOSURE		41			upvalue[4_upvalue[16_var14]] = upvalue[16_var14]
+NEWCLOSURE		42			upvalue[5_upvalue[2_var18]] = upvalue[2_var18]
+NEWCLOSURE		43			upvalue[6_upvalue[3_var8]] = upvalue[3_var8]
+NEWCLOSURE		44			upvalue[7_upvalue[17_var9]] = upvalue[17_var9]
+NEWCLOSURE		45			upvalue[8_upvalue[18_var10]] = upvalue[18_var10]
+NEWCLOSURE		46			upvalue[9_upvalue[19_var13]] = upvalue[19_var13]
+NEWCLOSURE		47			upvalue[10_upvalue[10_var1]] = upvalue[10_var1]
+NEWCLOSURE		48			upvalue[11_arg1] = arg1
+NEWCLOSURE		49			upvalue[12_upvalue[20_var3]] = upvalue[20_var3]
+NEWCLOSURE		50			upvalue[13_upvalue[9_var21]] = upvalue[9_var21]
+NEWCLOSURE		51			function var6.Fire(arg0, ...)
+GETUPVAL		0				var1 = upvalue[upvalue[1_upvalue[13_var5]]] -- [REDUNDANT]
+JUMPIFNOT		1				if var1 then
+GETUPVAL		0					var1 = upvalue[upvalue[2_upvalue[14_var2]]] -- [REDUNDANT]
+GETTABLEKS		1					var3 = arg0["name"] -- [REDUNDANT]
+GETVARARGS		3					var4 = ... -- [REDUNDANT]
+NAMECALL		4					var1 = var1:FireAllClients(var3, var4)
+RETURN			6					return 
+RETURN			6				end
+GETUPVAL		2				var2 = upvalue[upvalue[3_upvalue[15_var11]]] -- [REDUNDANT]
+GETUPVAL		3				var1 = upvalue[upvalue[4_upvalue[16_var14]]] -- [REDUNDANT]
+CALL			4				var1 = var1(var2) -- [REDUNDANT]
+JUMPIFNOT		5				if var1 then
+GETIMPORT		0					var1 = task["spawn"] -- [REDUNDANT]
+NEWCLOSURE		2					upvalue[1_upvalue[5_upvalue[2_var18]]] = upvalue[5_upvalue[2_var18]]
+NEWCLOSURE		3					upvalue[2_upvalue[6_upvalue[3_var8]]] = upvalue[6_upvalue[3_var8]]
+NEWCLOSURE		4					var2 = function() -- line: 138
+GETUPVAL		0						var0 = upvalue[upvalue[2_upvalue[6_upvalue[3_var8]]]] -- [REDUNDANT]
+SETUPVAL		1						upvalue[upvalue[1_upvalue[5_upvalue[2_var18]]]] = var0
+RETURN			2						return 
+RETURN			2					end
+CALL			5					var1 = var1(var2)
+GETUPVAL		6					var1 = upvalue[upvalue[2_upvalue[14_var2]]] -- [REDUNDANT]
+NAMECALL		7					var1 = var1:FireServer()
+GETIMPORT		9					var1 = task["spawn"]
+DUPCLOSURE		11					var2 = function() -- line: 142
+GETIMPORT		0						var0 = task["wait"] -- [REDUNDANT]
+LOADN			2						var1 = 1 -- [REDUNDANT]
+CALL			3						var0 = var0(var1)
+RETURN			4						return 
+RETURN			4					end
+CALL			12					var1 = var1(var2)
+RETURN			13					return 
+RETURN			13				end
+GETIMPORT		6				var1 = debug["traceback"] -- [REDUNDANT]
+CALL			8				var1 = var1()
+GETUPVAL		9				var3 = upvalue[upvalue[3_upvalue[15_var11]]]
+GETTABLE		10				var2 = var3[var1] -- [REDUNDANT]
+JUMPIF			11				if not var2 then
+GETUPVAL		0					var3 = upvalue[upvalue[7_upvalue[17_var9]]]
+GETUPVAL		1					var2 = upvalue[upvalue[4_upvalue[16_var14]]] -- [REDUNDANT]
+CALL			2					var2 = var2(var3)
+JUMPIF			3					if not var2 then
+GETUPVAL		0						var3 = upvalue[upvalue[8_upvalue[18_var10]]] -- [REDUNDANT]
+GETUPVAL		1						var2 = upvalue[upvalue[4_upvalue[16_var14]]] -- [REDUNDANT]
+CALL			2						var2 = var2(var3) -- [REDUNDANT]
+JUMPIFNOT		3						if var2 then
+GETUPVAL		0							var2 = upvalue[upvalue[2_upvalue[14_var2]]] -- [REDUNDANT]
+NAMECALL		1							var2 = var2:FireServer()
+GETIMPORT		3							var2 = task["spawn"] -- [REDUNDANT]
+NEWCLOSURE		5							upvalue[1_upvalue[5_upvalue[2_var18]]] = upvalue[5_upvalue[2_var18]]
+NEWCLOSURE		6							upvalue[2_upvalue[6_upvalue[3_var8]]] = upvalue[6_upvalue[3_var8]]
+NEWCLOSURE		7							var3 = function() -- line: 154
+GETUPVAL		0								var0 = upvalue[upvalue[2_upvalue[6_upvalue[3_var8]]]] -- [REDUNDANT]
+SETUPVAL		1								upvalue[upvalue[1_upvalue[5_upvalue[2_var18]]]] = var0
+RETURN			2								return 
+RETURN			2							end
+CALL			8							var2 = var2(var3)
+GETIMPORT		9							var2 = task["spawn"] -- [REDUNDANT]
+DUPCLOSURE		11							var3 = function() -- line: 157
+GETIMPORT		0								var0 = task["wait"] -- [REDUNDANT]
+LOADN			2								var1 = 1 -- [REDUNDANT]
+CALL			3								var0 = var0(var1)
+RETURN			4								return 
+RETURN			4							end
+CALL			12							var2 = var2(var3)
+RETURN			13							return 
+RETURN			13						end
+RETURN			13					end
+LOADN			4					var2 = 2 -- [REDUNDANT]
+FORNPREP		8					for var5 = 2, 20, 1 do
+GETIMPORT		0						var6 = debug["info"] -- [REDUNDANT]
+MOVE			2						var7 = var5 -- [REDUNDANT]
+LOADK			3						var8 = "n" -- [REDUNDANT]
+CALL			4						var6 = var6(var7, var8) -- [REDUNDANT]
+JUMPXEQKNIL		5						if var6 == nil then
+MOVE			0							var2 = var5
+MOVE			0						end
+JUMPXEQKNIL		6					end
+GETIMPORT		9					var4 = debug["info"] -- [REDUNDANT]
+MOVE			11					var5 = var2 -- [REDUNDANT]
+LOADK			12					var6 = "s"
+CALL			13					var4 = var4(var5, var6) -- [REDUNDANT]
+ORK				14					var3 = var4 or "" -- [REDUNDANT]
+GETIMPORT		15					var4 = string["split"] -- [REDUNDANT]
+MOVE			17					var5 = var3 -- [REDUNDANT]
+LOADK			18					var6 = "." -- [REDUNDANT]
+CALL			19					var4 = var4(var5, var6)
+GETTABLEN		20					var6 = var4[1]
+ORK				21					var5 = var6 or ""
+JUMPXEQKS		22					if var5 == "Players" then
+LOADK			0						var6 = "%*.%*.%*" -- [REDUNDANT]
+GETTABLEN		1						var9 = var4[1] -- [REDUNDANT]
+ORK				2						var8 = var9 or "" -- [REDUNDANT]
+GETTABLEN		3						var10 = var4[2] -- [REDUNDANT]
+ORK				4						var9 = var10 or "" -- [REDUNDANT]
+GETTABLEN		5						var11 = var4[3] -- [REDUNDANT]
+ORK				6						var10 = var11 or "" -- [REDUNDANT]
+NAMECALL		7						var6 = var6:format(var8, var9, var10)
+MOVE			9						var5 = var6
+MOVE			9					elseif var5 == "Workspace" then
+LOADK			0						var6 = "%*.%*" -- [REDUNDANT]
+GETTABLEN		1						var9 = var4[1] -- [REDUNDANT]
+ORK				2						var8 = var9 or "" -- [REDUNDANT]
+GETUPVAL		3						var9 = upvalue[upvalue[9_upvalue[19_var13]]] -- [REDUNDANT]
+NAMECALL		4						var6 = var6:format(var8, var9)
+MOVE			6						var5 = var6 -- [REDUNDANT]
+MOVE			6					end
+LENGTH			24					var7 = #var4 -- [REDUNDANT]
+GETTABLE		25					var6 = var4[var7]
+GETUPVAL		26					var8 = upvalue[upvalue[7_upvalue[17_var9]]]
+GETTABLE		27					var7 = var8[var6] -- [REDUNDANT]
+JUMPIFNOT		28					if var7 then
+GETUPVAL		0						var8 = upvalue[upvalue[8_upvalue[18_var10]]] -- [REDUNDANT]
+GETTABLE		1						var7 = var8[var5] -- [REDUNDANT]
+JUMPIFNOT		2						if var7 then
+JUMPXEQKS		0							if var6 == "" then
+JUMPXEQKS		0								if var5 == "" then
+GETUPVAL		0									var7 = upvalue[upvalue[10_upvalue[10_var1]]] -- [REDUNDANT]
+NAMECALL		1									var7 = var7:IsStudio()
+JUMPIFNOT		3									if var7 then
+GETIMPORT		0										var7 = warn -- [REDUNDANT]
+GETUPVAL		2										var8 = upvalue[upvalue[11_arg1]] -- [REDUNDANT]
+CALL			3										var7 = var7(var8)
+CALL			3									end
+GETIMPORT		4									var7 = task["spawn"] -- [REDUNDANT]
+DUPCLOSURE		6									upvalue[1_upvalue[2_upvalue[14_var2]]] = upvalue[2_upvalue[14_var2]]
+DUPCLOSURE		7									upvalue[2_upvalue[6_upvalue[3_var8]]] = upvalue[6_upvalue[3_var8]]
+DUPCLOSURE		8									var8 = function() -- line: 189
+GETUPVAL		0										var0 = upvalue[upvalue[1_upvalue[2_upvalue[14_var2]]]] -- [REDUNDANT]
+GETUPVAL		1										var2 = upvalue[upvalue[2_upvalue[6_upvalue[3_var8]]]] -- [REDUNDANT]
+NAMECALL		2										var0 = var0:FireServer(var2)
+RETURN			4										return 
+RETURN			4									end
+CALL			9									var7 = var7(var8)
+GETIMPORT		10									var7 = task["spawn"] -- [REDUNDANT]
+DUPCLOSURE		12									var8 = function() -- line: 193
+GETIMPORT		0										var0 = task["wait"] -- [REDUNDANT]
+LOADN			2										var1 = 1
+CALL			3										var0 = var0(var1)
+RETURN			4										return 
+RETURN			4									end
+CALL			13									var7 = var7(var8) -- [REDUNDANT]
+LOADNIL			14									var7 = nil -- [REDUNDANT]
+RETURN			15									return var7
+RETURN			15								end
+JUMPXEQKS		1							end
+JUMPXEQKS		1						end
+JUMPXEQKS		1					end
+GETUPVAL		29					var7 = upvalue[upvalue[3_upvalue[15_var11]]]
+LOADB			30					var8 = true -- [REDUNDANT]
+SETTABLE		31					var7[var1] = var8
+SETTABLE		31				end
+GETTABLEKS		12				var2 = arg0["hasBinds"] -- [REDUNDANT]
+JUMPIFNOT		14				if var2 then
+GETGLOBAL		0					var2 = _env
+LOADN			2					var3 = 8000 -- [REDUNDANT]
+GETIMPORT		3					var5 = getfenv -- [REDUNDANT]
+CALL			5					var5 = var5() -- [REDUNDANT]
+GETTABLEKS		6					var4 = var5["_"] -- [REDUNDANT]
+SETTABLE		8					var2[var3] = var4
+GETUPVAL		9					var2 = upvalue[upvalue[12_upvalue[20_var3]]] -- [REDUNDANT]
+GETGLOBAL		10					var4 = _env -- [REDUNDANT]
+GETTABLEKS		12					var5 = arg0["name"] -- [REDUNDANT]
+GETVARARGS		14					var6 = ... -- [REDUNDANT]
+NAMECALL		15					var2 = var2:Fire(var4, var5, var6)
+NAMECALL		16				end
+GETTABLEKS		15				var2 = arg0["isReplicated"] -- [REDUNDANT]
+JUMPIFNOT		17				if var2 then
+GETUPVAL		0					var3 = upvalue[upvalue[13_upvalue[9_var21]]] -- [REDUNDANT]
+GETTABLEKS		1					var4 = arg0["name"] -- [REDUNDANT]
+GETTABLE		3					var2 = var3[var4] -- [REDUNDANT]
+JUMPIFNOT		4					if var2 then
+NEWTABLE		0						var2 = {}
+GETVARARGS		2						var3 = ... -- [REDUNDANT]
+LOADN			4						var3 = 2
+GETUPVAL		5						var8 = upvalue[upvalue[13_upvalue[9_var21]]] -- [REDUNDANT]
+GETTABLEKS		6						var9 = arg0["name"] -- [REDUNDANT]
+GETTABLE		8						var7 = var8[var9] -- [REDUNDANT]
+GETTABLEN		9						var4 = var7[2]
+LOADNIL			10						var5 = nil -- [REDUNDANT]
+LOADNIL			11						var6 = nil -- [REDUNDANT]
+FORGPREP		12						for var7, var8 in var4, var5, var6 do
+ADD				0							var3 = var3 + var8
+ADD				0						end
+LOADN			14						var4 = 8
+ADD				15						var3 = var3 + var4 -- [REDUNDANT]
+GETIMPORT		16						var5 = buffer["create"] -- [REDUNDANT]
+MOVE			18						var6 = var3 -- [REDUNDANT]
+CALL			19						var5 = var5(var6)
+GETIMPORT		20						var6 = buffer["writestring"] -- [REDUNDANT]
+MOVE			22						var7 = var5
+MOVE			23						var8 = var4
+GETUPVAL		24						var11 = upvalue[upvalue[13_upvalue[9_var21]]] -- [REDUNDANT]
+GETTABLEKS		25						var12 = arg0["name"] -- [REDUNDANT]
+GETTABLE		27						var10 = var11[var12] -- [REDUNDANT]
+GETTABLEN		28						var9 = var10[1] -- [REDUNDANT]
+CALL			29						var6 = var6(var7, var8, var9)
+ADDK			30						var4 = var4 + 2
+GETUPVAL		31						var10 = upvalue[upvalue[13_upvalue[9_var21]]] -- [REDUNDANT]
+GETTABLEKS		32						var11 = arg0["name"] -- [REDUNDANT]
+GETTABLE		34						var9 = var10[var11] -- [REDUNDANT]
+GETTABLEN		35						var6 = var9[2] -- [REDUNDANT]
+LOADNIL			36						var7 = nil -- [REDUNDANT]
+LOADNIL			37						var8 = nil -- [REDUNDANT]
+FORGPREP		38						for var9, var10 in var6, var7, var8 do
+GETIMPORT		0							var11 = table["remove"] -- [REDUNDANT]
+MOVE			2							var12 = var2 -- [REDUNDANT]
+LOADN			3							var13 = 1 -- [REDUNDANT]
+CALL			4							var11 = var11(var12, var13) -- [REDUNDANT]
+MOVE			6							var13 = var5 -- [REDUNDANT]
+MOVE			7							var14 = var4 -- [REDUNDANT]
+MOVE			8							var15 = var11 -- [REDUNDANT]
+GETIMPORT		9							var12 = buffer["writef64"] -- [REDUNDANT]
+CALL			11							var12 = var12(var13, var14, var15)
+ADD				12							var4 = var4 + var10
+ADD				12						end
+GETUPVAL		40						var6 = upvalue[upvalue[2_upvalue[14_var2]]] -- [REDUNDANT]
+MOVE			41						var8 = var5 -- [REDUNDANT]
+NAMECALL		42						var6 = var6:FireServer(var8)
+RETURN			44						return 
+RETURN			44					end
+GETUPVAL		5					var2 = upvalue[upvalue[2_upvalue[14_var2]]] -- [REDUNDANT]
+GETUPVAL		6					var4 = upvalue[upvalue[5_upvalue[2_var18]]]
+JUMPIF			7					if not var4 then
+GETTABLEKS		0						var4 = arg0["name"]
+GETTABLEKS		1					end
+GETVARARGS		8					var5 = ... -- [REDUNDANT]
+NAMECALL		9					var2 = var2:FireServer(var4, var5)
+NAMECALL		10				end
+RETURN			18				return 
+RETURN			18			end
+NEWCLOSURE		53			upvalue[1_upvalue[13_var5]] = upvalue[13_var5]
+NEWCLOSURE		54			upvalue[2_upvalue[21_var4]] = upvalue[21_var4]
+NEWCLOSURE		55			upvalue[3_arg1] = arg1
+NEWCLOSURE		56			upvalue[4_upvalue[22_var19]] = upvalue[22_var19]
+NEWCLOSURE		57			function var6.Connect(arg0, arg1)
+GETUPVAL		0				var2 = upvalue[upvalue[1_upvalue[13_var5]]]
+JUMPIFNOT		1				if var2 then
+GETTABLEKS		0					var2 = arg0["isReplicated"]
+JUMPIF			2					if not var2 then
+LOADB			0						var2 = true -- [REDUNDANT]
+SETTABLEKS		1						arg0["isReplicated"] = var2
+GETUPVAL		3						var2 = upvalue[upvalue[2_upvalue[21_var4]]] -- [REDUNDANT]
+GETUPVAL		4						var4 = upvalue[upvalue[3_arg1]] -- [REDUNDANT]
+LOADB			5						var5 = true -- [REDUNDANT]
+NAMECALL		6						var2 = var2:FireAllClients(var4, var5)
+GETTABLEKS		8						var2 = arg0["hasBinds"]
+JUMPIF			10						if not var2 then
+LOADB			0							var2 = true -- [REDUNDANT]
+SETTABLEKS		1							arg0["hasBinds"] = var2
+SETTABLEKS		2						end
+SETTABLEKS		2					end
+SETTABLEKS		2				else
+GETTABLEKS		0					var2 = arg0["hasBinds"]
+JUMPIF			2					if not var2 then
+LOADB			0						var2 = true -- [REDUNDANT]
+SETTABLEKS		1						arg0["hasBinds"] = var2
+SETTABLEKS		2					end
+SETTABLEKS		2				end
+GETTABLEKS		2				var3 = arg0["name"] -- [REDUNDANT]
+NEWTABLE		4				var4 = {} -- [REDUNDANT]
+SETTABLE		6				var2[var3] = var4
+GETUPVAL		7				var4 = upvalue[upvalue[4_upvalue[22_var19]]] -- [REDUNDANT]
+GETTABLEKS		8				var5 = arg0["name"] -- [REDUNDANT]
+GETTABLE		10				var3 = var4[var5] -- [REDUNDANT]
+MOVE			12				var4 = arg1 -- [REDUNDANT]
+GETIMPORT		13				var2 = table["insert"] -- [REDUNDANT]
+CALL			15				var2 = var2(var3, var4)
+DUPTABLE		16				var2 = {}
+NEWCLOSURE		17				upvalue[1_upvalue[4_upvalue[22_var19]]] = upvalue[4_upvalue[22_var19]]
+NEWCLOSURE		18				upvalue[2_arg0] = arg0
+NEWCLOSURE		19				upvalue[3_arg1] = arg1
+NEWCLOSURE		20				upvalue[4_upvalue[1_upvalue[13_var5]]] = upvalue[1_upvalue[13_var5]]
+NEWCLOSURE		21				upvalue[5_upvalue[2_upvalue[21_var4]]] = upvalue[2_upvalue[21_var4]]
+NEWCLOSURE		22				upvalue[6_upvalue[3_arg1]] = upvalue[3_arg1]
+NEWCLOSURE		23				function var2.Destroy(arg0)
+GETIMPORT		0					var1 = table["remove"] -- [REDUNDANT]
+GETUPVAL		2					var3 = upvalue[upvalue[1_upvalue[4_upvalue[22_var19]]]] -- [REDUNDANT]
+GETUPVAL		3					var5 = upvalue[upvalue[2_arg0]] -- [REDUNDANT]
+GETTABLEKS		4					var4 = var5["name"] -- [REDUNDANT]
+GETTABLE		6					var2 = var3[var4] -- [REDUNDANT]
+GETIMPORT		7					var3 = table["find"] -- [REDUNDANT]
+GETUPVAL		9					var5 = upvalue[upvalue[1_upvalue[4_upvalue[22_var19]]]] -- [REDUNDANT]
+GETUPVAL		10					var7 = upvalue[upvalue[2_arg0]] -- [REDUNDANT]
+GETTABLEKS		11					var6 = var7["name"]
+GETTABLE		13					var4 = var5[var6]
+GETUPVAL		14					var5 = upvalue[upvalue[3_arg1]]
+CALL			15					var3 = var3(var4, var5) -- [REDUNDANT]
+CALL			16					var1 = var1(var2, var3, var4, var5)
+GETUPVAL		17					var2 = upvalue[upvalue[1_upvalue[4_upvalue[22_var19]]]] -- [REDUNDANT]
+GETUPVAL		18					var4 = upvalue[upvalue[2_arg0]] -- [REDUNDANT]
+GETTABLEKS		19					var3 = var4["name"] -- [REDUNDANT]
+GETTABLE		21					var1 = var2[var3]
+JUMPIFNOT		22					if var1 then
+GETUPVAL		0						var3 = upvalue[upvalue[1_upvalue[4_upvalue[22_var19]]]] -- [REDUNDANT]
+GETUPVAL		1						var5 = upvalue[upvalue[2_arg0]] -- [REDUNDANT]
+GETTABLEKS		2						var4 = var5["name"]
+GETTABLE		4						var2 = var3[var4]
+LENGTH			5						var1 = #var2 -- [REDUNDANT]
+LOADN			6						var2 = 1
+JUMPIFNOTLT		7						if var1 < var2 then
+GETUPVAL		0							var1 = upvalue[upvalue[4_upvalue[1_upvalue[13_var5]]]] -- [REDUNDANT]
+JUMPIFNOT		1							if var1 then
+GETUPVAL		0								var1 = upvalue[upvalue[2_arg0]]
+LOADB			1								var2 = false -- [REDUNDANT]
+SETTABLEKS		2								var1["isReplicated"] = var2
+GETUPVAL		4								var1 = upvalue[upvalue[5_upvalue[2_upvalue[21_var4]]]] -- [REDUNDANT]
+GETUPVAL		5								var3 = upvalue[upvalue[6_upvalue[3_arg1]]] -- [REDUNDANT]
+LOADB			6								var4 = false -- [REDUNDANT]
+NAMECALL		7								var1 = var1:FireAllClients(var3, var4)
+NAMECALL		8							else
+GETUPVAL		0								var1 = upvalue[upvalue[2_arg0]]
+LOADB			1								var2 = false -- [REDUNDANT]
+SETTABLEKS		2								var1["hasBinds"] = var2
+SETTABLEKS		3							end
+SETTABLEKS		3						end
+JUMPIFNOTLT		8					end
+LOADNIL			23					var1 = nil
+SETTABLEKS		24					arg0["Disconnect"] = var1
+LOADNIL			26					var0 = nil
+RETURN			27					return 
+RETURN			27				end
+GETTABLEKS		25				var3 = var2["Disconnect"]
+RETURN			28				return var2
+RETURN			28			end
+SETTABLE		59			arg0[var1] = var6
+RETURN			60			return var6
+RETURN			60		end
+DUPCLOSURE		115		upvalue[1_var1] = var1
+DUPCLOSURE		116		upvalue[2_var2] = var2
+DUPCLOSURE		117		function var27.__tostring()
+GETUPVAL		0			var0 = upvalue[upvalue[1_var1]] -- [REDUNDANT]
+NAMECALL		1			var0 = var0:IsStudio()
+JUMPIFNOT		3			if var0 then
+GETIMPORT		0				var0 = task["spawn"] -- [REDUNDANT]
+GETIMPORT		2				var1 = error -- [REDUNDANT]
+GETIMPORT		4				var2 = debug["traceback"] -- [REDUNDANT]
+CALL			6				var2 = var2() -- [REDUNDANT]
+CALL			7				var0 = var0(var1, var2) -- [REDUNDANT]
+LOADK			8				var0 = "{}" -- [REDUNDANT]
+RETURN			9				return var0
+RETURN			9			end
+GETIMPORT		4			var0 = task["spawn"] -- [REDUNDANT]
+DUPCLOSURE		6			upvalue[1_upvalue[2_var2]] = upvalue[2_var2]
+DUPCLOSURE		7			var1 = function() -- line: 286
+GETUPVAL		0				var0 = upvalue[upvalue[1_upvalue[2_var2]]] -- [REDUNDANT]
+NAMECALL		1				var0 = var0:FireServer()
+RETURN			3				return 
+RETURN			3			end
+CALL			8			var0 = var0(var1)
+GETIMPORT		9			var0 = task["spawn"] -- [REDUNDANT]
+DUPCLOSURE		11			var1 = function() -- line: 289
+GETIMPORT		0				var0 = task["wait"] -- [REDUNDANT]
+LOADN			2				var1 = 1 -- [REDUNDANT]
+CALL			3				var0 = var0(var1)
+RETURN			4				return 
+RETURN			4			end
+CALL			12			var0 = var0(var1) -- [REDUNDANT]
+LOADK			13			var0 = "{}" -- [REDUNDANT]
+RETURN			14			return var0
+RETURN			14		end
+GETIMPORT		120		var25 = setmetatable -- [REDUNDANT]
+CALL			122		var25 = var25(var26, var27)
+JUMPIFNOT		123		if var5 then
+GETIMPORT		0			var26 = _G
+SETTABLEKS		2			var26["ACTIONS_OBF_TO_REAL"] = var23
+GETIMPORT		4			var26 = require -- [REDUNDANT]
+GETIMPORT		6			var28 = script -- [REDUNDANT]
+GETTABLEKS		8			var27 = var28["ServerActions"] -- [REDUNDANT]
+CALL			10			var26 = var26(var27) -- [REDUNDANT]
+MOVE			11			var27 = var19 -- [REDUNDANT]
+MOVE			12			var28 = var22 -- [REDUNDANT]
+MOVE			13			var29 = var21 -- [REDUNDANT]
+MOVE			14			var30 = var23 -- [REDUNDANT]
+CALL			15			var26 = var26(var27, var28, var29, var30)
+GETIMPORT		16			var27 = script -- [REDUNDANT]
+GETTABLEKS		18			var26 = var27["ServerActions"]
+GETIMPORT		20			var28 = game
+GETTABLEKS		22			var27 = var28["ServerScriptService"]
+SETTABLEKS		24			var26["Parent"] = var27
+GETIMPORT		26			var26 = math["random"] -- [REDUNDANT]
+LOADN			28			var27 = 1 -- [REDUNDANT]
+LOADN			29			var28 = 10000
+CALL			30			var26 = var26(var27, var28) -- [REDUNDANT]
+MOVE			31			var15 = var26 -- [REDUNDANT]
+GETIMPORT		32			var27 = game -- [REDUNDANT]
+GETTABLEKS		34			var26 = var27["ReplicatedStorage"] -- [REDUNDANT]
+LOADK			36			var28 = "_globalSeed" -- [REDUNDANT]
+MOVE			37			var29 = var15 -- [REDUNDANT]
+NAMECALL		38			var26 = var26:SetAttribute(var28, var29)
+NEWTABLE		40			var26 = {} -- [REDUNDANT]
+GETIMPORT		42			var28 = script -- [REDUNDANT]
+GETTABLEKS		44			var27 = var28["Init"]
+DUPCLOSURE		46			upvalue[1_var26] = var26
+DUPCLOSURE		47			upvalue[2_var25] = var25
+DUPCLOSURE		48			var28 = function(arg0) -- line: 310
+GETUPVAL		0				var2 = upvalue[upvalue[1_var26]]
+GETTABLE		1				var1 = var2[arg0] -- [REDUNDANT]
+JUMPIFNOT		2				if var1 then
+RETURN			0					return 
+RETURN			0				end
+GETUPVAL		3				var1 = upvalue[upvalue[1_var26]]
+LOADB			4				var2 = true
+SETTABLE		5				var1[arg0] = var2
+GETIMPORT		6				var1 = task["delay"] -- [REDUNDANT]
+LOADN			8				var2 = 1
+NEWCLOSURE		9				upvalue[1_upvalue[1_var26]] = upvalue[1_var26]
+NEWCLOSURE		10				upvalue[2_arg0] = arg0
+NEWCLOSURE		11				var3 = function() -- line: 315
+GETUPVAL		0					var0 = upvalue[upvalue[1_upvalue[1_var26]]]
+GETUPVAL		1					var1 = upvalue[upvalue[2_arg0]] -- [REDUNDANT]
+LOADNIL			2					var2 = nil -- [REDUNDANT]
+SETTABLE		3					var0[var1] = var2
+RETURN			4					return 
+RETURN			4				end
+CALL			12				var1 = var1(var2, var3)
+NEWTABLE		13				var1 = {}
+GETUPVAL		15				var2 = upvalue[upvalue[2_var25]] -- [REDUNDANT]
+LOADNIL			16				var3 = nil -- [REDUNDANT]
+LOADNIL			17				var4 = nil -- [REDUNDANT]
+FORGPREP		18				for var5, var6 in var2, var3, var4 do
+GETTABLEKS		0					var7 = var6["isReplicated"]
+JUMPIFNOT		2					if var7 then
+LOADB			0						var7 = true -- [REDUNDANT]
+SETTABLE		1						var1[var5] = var7
+SETTABLE		1					end
+SETTABLE		1				end
+RETURN			20				return var1
+RETURN			20			end
+SETTABLEKS		49			var27["OnServerInvoke"] = var28
+SETTABLEKS		50		else
+GETTABLEKS		0			var26 = var2["OnClientEvent"] -- [REDUNDANT]
+DUPCLOSURE		2			upvalue[1_var19] = var19
+DUPCLOSURE		3			var28 = function(arg0, ...) -- line: 330
+GETUPVAL		0				var2 = upvalue[upvalue[1_var19]] -- [REDUNDANT]
+GETTABLE		1				var1 = var2[arg0]
+JUMPIFNOT		2				if var1 then
+MOVE			0					var2 = var1 -- [REDUNDANT]
+LOADNIL			1					var3 = nil -- [REDUNDANT]
+LOADNIL			2					var4 = nil -- [REDUNDANT]
+FORGPREP		3					for var5, var6 in var2, var3, var4 do
+GETIMPORT		0						var7 = task["spawn"] -- [REDUNDANT]
+MOVE			2						var8 = var6 -- [REDUNDANT]
+GETVARARGS		3						var9 = ...
+CALL			4						var7 = var7(var8)
+CALL			4					end
+FORGLOOP		4				end
+RETURN			3				return 
+RETURN			3			end
+NAMECALL		4			var26 = var26:Connect(var28)
+GETTABLEKS		6			var26 = var3["Event"] -- [REDUNDANT]
+DUPCLOSURE		8			upvalue[1_var19] = var19
+DUPCLOSURE		9			var28 = function(arg0, arg1, ...) -- line: 338
+JUMPIF			0				if not arg0 then
+RETURN			0					return 
+RETURN			0				end
+LOADN			1				var3 = 8000
+GETTABLE		2				var2 = arg0[var3] -- [REDUNDANT]
+JUMPIFNOT		3				if var2 then
+LOADN			0					var3 = 8000 -- [REDUNDANT]
+GETTABLE		1					var2 = arg0[var3] -- [REDUNDANT]
+GETGLOBAL		2					var3 = _
+JUMPIFEQ		4					if var2 ~= var3 then
+RETURN			0						return 
+RETURN			0					end
+JUMPIFEQ		5				end
+GETUPVAL		4				var3 = upvalue[upvalue[1_var19]] -- [REDUNDANT]
+GETTABLE		5				var2 = var3[arg1]
+JUMPIFNOT		6				if var2 then
+MOVE			0					var3 = var2 -- [REDUNDANT]
+LOADNIL			1					var4 = nil -- [REDUNDANT]
+LOADNIL			2					var5 = nil -- [REDUNDANT]
+FORGPREP		3					for var6, var7 in var3, var4, var5 do
+GETIMPORT		0						var8 = task["spawn"] -- [REDUNDANT]
+MOVE			2						var9 = var7 -- [REDUNDANT]
+GETVARARGS		3						var10 = ...
+CALL			4						var8 = var8(var9)
+CALL			4					end
+FORGLOOP		4				end
+RETURN			7				return 
+RETURN			7			end
+NAMECALL		10			var26 = var26:Connect(var28)
+GETTABLEKS		12			var26 = var4["OnClientEvent"] -- [REDUNDANT]
+DUPCLOSURE		14			upvalue[1_var25] = var25
+DUPCLOSURE		15			var28 = function(arg0, arg1) -- line: 357
+GETUPVAL		0				var3 = upvalue[upvalue[1_var25]] -- [REDUNDANT]
+GETTABLE		1				var2 = var3[arg0]
+JUMPIFNOT		2				if var2 then
+SETTABLEKS		0					var2["isReplicated"] = arg1
+SETTABLEKS		1				end
+RETURN			3				return 
+RETURN			3			end
+NAMECALL		16			var26 = var26:Connect(var28)
+GETIMPORT		18			var27 = game
+GETTABLEKS		20			var26 = var27["ReplicatedStorage"] -- [REDUNDANT]
+LOADK			22			var28 = "_globalSeed"
+NAMECALL		23			var26 = var26:GetAttribute(var28)
+JUMPIF			25			while var26 do
+GETIMPORT		0				var26 = task["wait"] -- [REDUNDANT]
+CALL			2				var26 = var26()
+CALL			2			end
+GETTABLEKS		26			var26 = var27["ReplicatedStorage"] -- [REDUNDANT]
+LOADK			28			var28 = "_globalSeed"
+NAMECALL		29			var26 = var26:GetAttribute(var28)
+MOVE			31			var15 = var26
+GETIMPORT		32			var27 = game -- [REDUNDANT]
+GETTABLEKS		34			var26 = var27["ReplicatedStorage"] -- [REDUNDANT]
+LOADK			36			var28 = "_globalSeed" -- [REDUNDANT]
+LOADNIL			37			var29 = nil -- [REDUNDANT]
+NAMECALL		38			var26 = var26:SetAttribute(var28, var29)
+GETIMPORT		40			var26 = task["spawn"] -- [REDUNDANT]
+DUPCLOSURE		42			upvalue[1_var25] = var25
+DUPCLOSURE		43			var27 = function() -- line: 370
+GETIMPORT		0				var1 = script -- [REDUNDANT]
+GETTABLEKS		2				var0 = var1["Init"] -- [REDUNDANT]
+NAMECALL		4				var0 = var0:InvokeServer()
+MOVE			6				var1 = var0 -- [REDUNDANT]
+LOADNIL			7				var2 = nil -- [REDUNDANT]
+LOADNIL			8				var3 = nil -- [REDUNDANT]
+FORGPREP		9				for var4, var5 in var1, var2, var3 do
+GETUPVAL		0					var7 = upvalue[upvalue[1_var25]]
+GETTABLE		1					var6 = var7[var4]
+LOADB			2					var7 = true -- [REDUNDANT]
+SETTABLEKS		3					var6["isReplicated"] = var7
+SETTABLEKS		4				end
+RETURN			11				return 
+RETURN			11			end
+CALL			44			var26 = var26(var27)
+CALL			44		end
+RETURN			124		return var25
